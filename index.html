@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" href="Asset/adminprofiles.jpg" type="image/icon type">
+    <title>Lilychee Art</title>
+    <style>
+        @font-face{
+            font-family: Tuffy;
+            src: url("Asset/Tuffy-Regular.ttf");
+        }
+        @font-face{
+            font-family: Viga;
+            src: url("Asset/Viga-Regular.ttf");
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .headtap{
+            position: fixed;
+            height: 71px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+        }
+        .headtap_box{
+            position: absolute;
+            width: 56px;
+            height: 35px;
+            right: 320px;
+            top: calc(50% - 35px/2);
+
+            border: 4px solid #FFFFFF;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        .headtap_title{
+            position: absolute;
+            width: 91px;
+            height: 32px;
+            left: 56px;
+            top: calc(50% - 32px/2 - 0.5px);
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+
+            color: #FFFFFF;
+        }
+        .home_tap{
+            position: absolute;
+            width: 33px;
+            height: 18px;
+            right: 330px;
+            top: calc(50% - 18px/2 - 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .commision_tap{
+            position: absolute;
+            width: 80px;
+            height: 18px;
+            right: 232px;
+            top: calc(50% - 18px/2 - 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .illustration_tap{
+            position: absolute;
+            width: 89px;
+            height: 18px;
+            right: 125px;
+            top: calc(50% - 18px/2 + 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .contact_tap{
+            position: absolute;
+            width: 56px;
+            height: 18px;
+            right: 51px;
+            top: calc(50% - 18px/2 + 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .cover_image{
+            background-image: url("Asset/websitecoverimage.jpg");
+            height: 554px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .headtap_background{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+
+            background: #000000;
+            opacity: 0%;
+        }
+        
+                                                /* kon leng dak tinanei robos me */
+        
+        .detail_container{
+            position: absolute;
+            height: 241px;
+            left: 0px;
+            right: 0px;
+            top: 554px;
+        }
+        .admin_profile{
+            position: absolute;
+            width: 135px;
+            height: 135px;
+            left: calc(50% - 135px/2 - 152.5px);
+            top: 33px;
+
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 161.5px;
+        }
+        .detail_header_text{
+            position: absolute;
+            width: 236px;
+            height: 19px;
+            left: calc(50% - 236px/2 + 77px);
+            top: 33px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+
+            color: #000000;
+        }
+        .detail_body_text{
+            position: absolute;
+            width: 272px;
+            height: 112px;
+            left: calc(50% - 272px/2 + 95px);
+            top: 73px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+
+            color: #000000;
+        }
+        
+                                                        /* kon leng bong danh song kom */
+        
+        .socialmedia_container{
+            position: absolute;
+            height: 143px;
+            left: 0px;
+            right: 0px;
+            top: 831px;
+        }
+        .socialmedia_text{
+            position: absolute;
+            width: 145px;
+            height: 16px;
+            left: calc(50% - 145px/2 - 0.5px);
+            top: 15px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+        }
+        .facebook_img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 - 113px);
+            top: 54px;
+        }
+        .instagram_img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 - 38px);
+            top: 54px;
+        }
+        .twitter_img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 + 37px);
+            top: 54px;
+        }
+        .devil_img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 + 112px);
+            top: 54px;
+        }
+        
+                                                                /* kon leng dak kam sit */
+        
+        
+        .copywriter_container{
+            position: absolute;
+            height: 60px;
+            left: 0px;
+            right: 0px;
+            top: 1053px;
+            background: #000000;
+        }
+        .copyriter_text{
+            position: absolute;
+            width: 80px;
+            height: 24px;
+            left: calc(50% - 80px/2);
+            bottom: 19px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 9px;
+            line-height: 12px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+    </style>
+    <div class="cover_image" onmouseover="hideheader()" onmouseout="showheader()"></div>
+    
+    <div class="detail_container">
+        <img class="admin_profile" src="Asset/adminprofiles.jpg">
+        <p class="detail_header_text">⭐ Freelance | Illustration Artist ⭐</p>
+        <p class="detail_body_text">⭐ About me ⭐<br>Hi I'm Ly, known of the social medias as either Lilychee or Lilych33! I'm a French freelance artist who does commissions: character designs, illustration, backgrounds...<br><br>Nice to meet you!</p>
+    </div>
+    
+    <div class="socialmedia_container">
+        <label class="socialmedia_text">⭐ Social media ⭐</label>
+        <a href="https://web.facebook.com/lilychee.art">
+        <img class="facebook_img" src="Asset/Icons/facebook_icon.png">
+        </a>
+        <a href="https://www.instagram.com/lilych33">
+        <img class="instagram_img" src="Asset/Icons/instagram_icon.png">
+        </a>
+        <a href="https://twitter.com/lilych33">
+        <img class="twitter_img" src="Asset/Icons/twitter_icon.png">
+        </a>
+        <a href="https://www.deviantart.com/lilych33">
+        <img class="devil_img" src="Asset/Icons/youtube_icon.png">
+        </a>
+    </div>
+    
+    <div class="copywriter_container">
+        <label class="copyriter_text">©2021 Lilych33<br>All Rights Reserved</label>
+    </div>
+    
+    <div class="headtap">
+        <div class="headtap_background" id="blacker_b"></div>
+        <div class="headtap_box"></div>
+        <a href="index.html">
+            <label class="headtap_title">Lilychee</label>
+        </a>
+        <a href="index.html">
+            <label class="home_tap">HOME</label>
+        </a>
+        <a href="commisions.html">
+            <label class="commision_tap">COMMISSIONS</label>
+        </a>
+        <a href="Illustrations.html">
+            <label class="illustration_tap">ILLUSTRATIONS</label>
+        </a>
+        <a href="contacts.html">
+            <label class="contact_tap">CONTACT</label>
+        </a>
+    </div>
+    
+    <script>
+        function showheader(){
+            var x = document.getElementById("blacker_b");
+            x.style.opacity = "100%";
+        }
+        function hideheader(){
+            var x = document.getElementById("blacker_b");
+            x.style.opacity = "0%";
+        }
+    </script>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" href="Asset/adminprofiles.jpg" type="image/icon type">
+    <title>Lilychee Art</title>
+    <style>
+        @font-face{
+            font-family: Tuffy;
+            src: url("Asset/Tuffy-Regular.ttf");
+        }
+        @font-face{
+            font-family: Viga;
+            src: url("Asset/Viga-Regular.ttf");
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .headtap{
+            position: fixed;
+            height: 71px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+        }
+        .headtap_box{
+            position: absolute;
+            width: 98px;
+            height: 35px;
+            right: 223px;
+            top: calc(50% - 35px/2);
+
+            border: 4px solid #FFFFFF;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        .headtap_title{
+            position: absolute;
+            width: 91px;
+            height: 32px;
+            left: 56px;
+            top: calc(50% - 32px/2 - 0.5px);
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+
+            color: #FFFFFF;
+        }
+        .home_tap{
+            position: absolute;
+            width: 33px;
+            height: 18px;
+            right: 330px;
+            top: calc(50% - 18px/2 - 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .commision_tap{
+            position: absolute;
+            width: 80px;
+            height: 18px;
+            right: 232px;
+            top: calc(50% - 18px/2 - 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .illustration_tap{
+            position: absolute;
+            width: 89px;
+            height: 18px;
+            right: 125px;
+            top: calc(50% - 18px/2 + 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .contact_tap{
+            position: absolute;
+            width: 56px;
+            height: 18px;
+            right: 51px;
+            top: calc(50% - 18px/2 + 0.5px);
+
+            font-family: Tuffy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .cover_image{
+            background-image: url("Asset/websitecoverimage.jpg");
+            height: 554px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .headtap_background{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+
+            background: #000000;
+            opacity: 0%;
+        }
+        
+                                                /* kon leng dak taktong nhom */
+        
+        .contact_container{
+            position: absolute;
+            height: 384px;
+            left: 0px;
+            right: 0px;
+            top: 554px;
+        }
+        .contact_text_first{
+            position: absolute;
+            width: 175px;
+            height: 17px;
+            left: calc(50% - 175px/2 - 0.5px);
+            top: calc(50% - 17px/2 - 126.5px);
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 17px;
+            text-align: center;
+
+            color: #000000;
+        }
+        .contact_text_second{
+            position: absolute;
+            width: 263px;
+            height: 32px;
+            left: calc(50% - 263px/2 - 0.5px);
+            top: 102px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+
+            color: #000000;
+        }
+        .contact_text_third{
+            position: absolute;
+            width: 236px;
+            height: 17px;
+            left: calc(50% - 236px/2 - 1px);
+            top: calc(50% - 17px/2 - 8.5px);
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 17px;
+            text-align: center;
+
+            color: #000000;
+        }
+        .contact_fb{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 - 113px);
+            top: 251px;
+        }
+        .contact_ig{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 - 38px);
+            top: 251px;
+        }
+        .contact_tw{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 + 37px);
+            top: 251px;
+        }
+        .contact_dv{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: calc(50% - 50px/2 + 112px);
+            top: 251px;
+        }
+        
+        
+                                                        /* kon leng dak komission nhom */
+        
+        .pastcomm_container{
+            position: absolute;
+            height: 465px;
+            left: 0px;
+            right: 0px;
+            top: 938px;
+
+            background: #414141;
+            border-radius: 30px 0px 0px 0px;
+        }
+        .pastcomm_text{
+            position: absolute;
+            width: 149px;
+            height: 24px;
+            left: 36px;
+            top: 31px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+        .pastcomm_img_01{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2 - 182px);
+            top: 97px;
+
+            background: url(Asset/comissions/comission_01.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pastcomm_img_02{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2);
+            top: 97px;
+
+            background: url(Asset/comissions/comission_02.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pastcomm_img_03{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2 + 182px);
+            top: 97px;
+
+            background: url(Asset/comissions/comission_03.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pastcomm_img_04{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2 - 182px);
+            top: 275px;
+
+            background: url(Asset/comissions/comission_04.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pastcomm_img_05{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2);
+            top: 275px;
+
+            background: url(Asset/comissions/comission_05.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pastcomm_img_06{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: calc(50% - 150px/2 + 182px);
+            top: 275px;
+
+            background: url(Asset/comissions/comission_06.jpg);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 29px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        
+        
+        
+                                                                /* kon leng dak kama sit */
+        
+        
+        .copywriter_container{
+            position: absolute;
+            height: 60px;
+            left: 0px;
+            right: 0px;
+            top: 1403px;
+            background: #000000;
+        }
+        .copyriter_text{
+            position: absolute;
+            width: 80px;
+            height: 24px;
+            left: calc(50% - 80px/2);
+            bottom: 19px;
+
+            font-family: Viga;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 9px;
+            line-height: 12px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+    </style>
+    <div class="cover_image" onmouseover="hideheader()" onmouseout="showheader()"></div>
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="contact_container">
+        <label class="contact_text_first">Contact me for commissions : </label>
+        <label class="contact_text_second">Lilychee.art@gmail.com</label>
+        <label class="contact_text_third">You can contact me though social media</label>
+        <a href="https://web.facebook.com/lilychee.art"><img class="contact_fb" src="Asset/Icons/facebook_icon.png"></a>
+        <a href="https://www.instagram.com/lilych33"><img class="contact_ig" src="Asset/Icons/instagram_icon.png"></a>
+        <a href="https://twitter.com/lilych33"><img class="contact_tw" src="Asset/Icons/twitter_icon.png"></a>
+        <a href="https://www.deviantart.com/lilych33"><img class="contact_dv" src="Asset/Icons/deviantart_icon.png"></a>
+    </div>
+    <div class="pastcomm_container">
+        <label class="pastcomm_text">Past commissions</label>
+        <div class="pastcomm_img_01"></div>
+        <div class="pastcomm_img_02"></div>
+        <div class="pastcomm_img_03"></div>
+        <div class="pastcomm_img_04"></div>
+        <div class="pastcomm_img_05"></div>
+        <div class="pastcomm_img_06"></div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="copywriter_container">
+        <label class="copyriter_text">©2021 Lilych33<br>All Rights Reserved</label>
+    </div>
+
+    
+    <div class="headtap">
+        <div class="headtap_background" id="blacker_b"></div>
+        <div class="headtap_box"></div>
+        <a href="index.html">
+            <label class="headtap_title">Lilychee</label>
+        </a>
+        <a href="index.html">
+            <label class="home_tap">HOME</label>
+        </a>
+        <a href="commisions.html">
+            <label class="commision_tap">COMMISSIONS</label>
+        </a>
+        <a href="illustrations.html">
+            <label class="illustration_tap">ILLUSTRATIONS</label>
+        </a>
+        <a href="contacts.html">
+            <label class="contact_tap">CONTACT</label>
+        </a>
+    </div>
+    
+    <script>
+        function showheader(){
+            var x = document.getElementById("blacker_b");
+            x.style.opacity = "100%";
+        }
+        function hideheader(){
+            var x = document.getElementById("blacker_b");
+            x.style.opacity = "0%";
+        }
+    </script>
+</html>
